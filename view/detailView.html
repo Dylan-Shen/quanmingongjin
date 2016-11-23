@@ -1,0 +1,114 @@
+<div class="container detail">
+	<div class="detail-top clear">
+		<div class="detail-top-title">
+			<h3 ng-bind="item.title"></h2>
+			<h5 ng-bind="item.by"></h5>
+		</div>
+		<div class="detail-left fl">
+			<img src="{{item.imgSrc}}">
+			<div class="detail-left-text">
+				<p>
+					<span>
+						<i class="icon">&#xe603;</i>
+						<span ng-bind="item.class"></span>
+					</span>
+					<span>
+						<i class="icon">&#xe604;</i>
+						<span ng-bind="item.recommend"></span>
+					</span>
+				</p>
+				<p ng-bind="item.text"></p>
+			</div>
+		</div>
+		<div class="detail-right fr">
+			<div class="detail-right-top">
+				<h1 ng-bind="item.people"></h1>
+				<h5>支持者</h5>
+				<h1 ng-bind="item.money"></h1>
+				<h5>支持金额 总金额</h5>
+				<h1 ng-bind="item.days"></h1>
+				<h5>剩余天数</h5>
+				<button type="button" class="detail-btn cbc-ff4200">
+					<a ng-click="userSupportFn(item.id,5)">支持项目</a>
+				</button>
+				<span>分享到圈子</span>
+				<p ng-bind="item.time"></p>
+			</div>
+			<div class="detail-right-bottom clear">
+				<div class="detail-right-bottom-left">
+					<h5 ng-bind="item.by"></h5>
+					<a href="#">他的主页</a>
+					<a href="#">联系他</a>
+				</div>
+				<img src="img/头像.png" alt="">
+			</div>
+		</div>
+	</div>
+</div>
+<div class="detail-nav">
+	<ul class="clear container">
+		<li><a href="" ng-click="detailLeftShow(1)">剧情介绍</a></li>
+		<li><a href="" ng-click="detailLeftShow(2);addTree()">发展历程</a></li>
+		<li><a href="" ng-click="detailLeftShow(3)">圈子交流</a></li>	
+	</ul>
+</div>
+<div class="detail-content clear cbc-fff">
+	<div class="container">
+		<div class="detail-left fl" ng-show="showIndex == 1">
+			<img src="{{item.imgSrc2}}" alt="">
+		</div>
+		<div class="detail-left fl"  ng-show="showIndex == 2">
+			<div class="tree-box">
+			</div>
+		</div>
+		<div class="detail-left fl"  ng-show="showIndex == 3">
+			<img src="{{item.imgSrc2}}" alt="">
+		</div>
+		<div class="detail-right fr cbc-d9d9de">
+			<div class="price-box">
+				<div class="price-title">
+					<h5>支持￥5</h5>
+					<span>
+						<span class="cfc-ff4200">{{item.people}}支持者</span>
+						<span>，限5000位</span>
+					</span>
+				</div>
+				<div class="price-content">
+					<h5>感谢您的支持，您将获得：</h5>
+					<p ng-bind="item.support"></p>
+					<p><h6>预计发放时间：</h6><span>项目成功结束后五天内</span></p>
+					<button type="button" class="cbc-ff4200 price-btn">
+					<!-- supportView 链接 -->
+						<a ng-click="userSupportFn(item.id,5)"><h5 class="cfc-fff">支持￥5</h5></a>
+					</button>
+				</div>
+			</div>
+			<div class="price-box">
+				<div class="price-title">
+					<h5>支持￥10</h5>
+					<span>
+						<span class="cfc-ff4200">{{item.people}}支持者</span>
+						<span>，限5000位</span>
+					</span>
+				</div>
+				<div class="price-content">
+					<h5>感谢您的支持，您将获得：</h5>
+					<p ng-bind="item.support"></p>
+					<p><h6>预计发放时间：</h6><span>项目成功结束后五天内</span></p>
+					<button type="button" class="cbc-ff4200 price-btn">
+						<a ng-click="userSupportFn(item.id,10)"><h5 class="cfc-fff">支持￥10</h5></a>
+					</button>
+				</div>
+			</div>
+			<div class="price-box price-about">
+				<div class="price-title">
+					<h5>关于支持与退款</h5>
+				</div>
+				<div class="price-content">
+					<p>该项目必须在<span class="cfc-ff4200">2015</span>年<span class="cfc-ff4200">12</span>月<span class="cfc-ff4200">15</span>日上午<span class="cfc-ff4200">10</span>点前完成<span class="cfc-ff4200">￥32000</span>才算成功，否则订单将取消。</p>
+					<p>订单取消后，您的支持金额，将从你支付的储蓄卡或信用卡原路退回。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

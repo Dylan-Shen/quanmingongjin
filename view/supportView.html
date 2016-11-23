@@ -1,0 +1,31 @@
+<div class="support">
+	<div class="support-title">
+		<div class="container clear">
+			<h4 class="support-title-left fl" ng-bind="item.title" ng-show="supportNum!=3"></h4>
+			<h4 class="support-title-left fl" style="margin-left: 100px;" ng-show="supportNum==3"><img src="img/图标.png" alt=""></h4>
+			<div class="support-title-right fr">
+				<ul class="order clear">
+					<li ui-sref="support.class1" ui-sref-active="order-show">
+						<div class="order-circle">
+							<p>1</p>
+						</div>
+						<h6>填写核对订单信息</h6>
+					</li>
+					<li ui-sref="support.class2" ui-sref-active="order-show" >
+						<div class="order-circle">
+							<p>2</p>
+						</div>
+						<h6>支付</h6>
+					</li>
+					<li ui-sref="support.class3" ui-sref-active="order-show" >
+						<div class="order-circle">
+							<p>3</p>
+						</div>
+						<h6>完成</h6>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="support-box" ui-view autoscroll="false"></div>
+</div>

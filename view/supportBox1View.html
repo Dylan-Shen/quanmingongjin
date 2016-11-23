@@ -1,0 +1,7 @@
+<h5>清选择银行:</h5>
+<ul class="clear">
+	<li ng-repeat="item in payBank" ng-click="payFn($index)">
+		<span ng-class="{'pay-li-show':payIndex == $index}"></span>
+		<img ng-src="{{item}}">
+	</li>
+</ul>

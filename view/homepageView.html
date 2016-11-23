@@ -1,0 +1,129 @@
+<div class="banner">
+	<ul>
+		<li ng-repeat="x in message" ng-show="flag == $index">
+			<h2 ng-bind="x.title"></h2>
+			<p ng-bind="x.text"></p>
+			<img ng-src="{{x.imgSrc}}">
+		</li>
+	</ul>
+	<div class="banner-left">
+		<div class="banner-prev" ng-click='bannerPrev()'><i class="icon">&#xe602;</i></div>
+	</div>
+	<div class="banner-right">
+		<div class="banner-next" ng-click='bannerNext()'><i class="icon">&#xe601;</i></div>
+	</div>
+	<div class="banner-btn cbc-ff4200">
+		<a ui-sref="detail({id:message[flag].id})"><h4 class="cfc-fff">查看项目</h4></a>
+	</div>
+</div>
+<div class="homepage-mainof-1 main">
+	<div class="container clear">
+		<div class="hot fl">
+			<div class="hot-title clear">
+				<h4 class="fl">热门项目</h4>
+				<a ui-sref="program1({hot:1})" class="fr">查看更多</a>
+			</div>
+			<div class="hot-content clear fl">
+				<a ui-sref="detail({id:message[flag].id})"><img ng-src="{{message[flag].imgSrc1}}" class="fl"></a>
+				<div class="hot-content-text fr">
+					<a ui-sref="detail({id:message[flag].id})"><h4 ng-bind="message[flag].title" style="margin-left: -5px;"></h4></a>
+					<p ng-bind="message[flag].by"></p>
+					<br>
+					<p ng-bind="message[flag].filmDetails"></p>
+					<div class="hot-content-plan">
+						<span>
+							<i class="icon">&#xe603;</i>
+							<span ng-bind="message[flag].class"></span>
+						</span>
+						<span>
+							<i class="icon">&#xe604;</i>
+							<span ng-bind="message[flag].recommend"></span>
+						</span>
+						<div class="plan">
+							<div class="bar cbc-ff4200" ng-style="{width: message[flag].plan}"></div>
+						</div>
+						<ul class="plan-message clear">
+							<li>
+								<h5 ng-bind="message[flag].plan"></h5>
+								<p>进度</p>
+							</li>
+							<li>
+								<h5 ng-bind="message[flag].money"></h5>
+								<p>支持金额</p>
+							</li>
+							<li>
+								<h5 ng-bind="message[flag].people"></h5>
+								<p>支持者</p>
+							</li>
+							<li>
+								<h5 ng-bind="message[flag].days"></h5>
+								<p>剩余天数</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<ul class="filmclass fr">
+			<li ng-repeat="x in filmClassName" class="currentBorder">
+				<span ng-bind="x" ng-class="{true:'changeBorder cfc-ff4200',false:''}[message[flag].class==filmClassName[$index]]"></span>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="homepage-mainof-2 main">
+	<div class="container">
+		<div class="main-title clear">
+			<h4 class="fl">卫视主推</h4>
+			<a ui-sref="program" class="fr">查看全部</a>
+		</div>
+		<ul class="homepage-mainof-2-list clear">
+			<li ng-repeat="item in message | limitTo:3" class="fl">
+				<div class="mainof-2-content clear">
+					<a ui-sref="detail({id:item.id})"><img ng-src="{{item.imgSrc1}}"></a>
+					<div class="mainof-2-content-text">
+						<a ui-sref="detail({id:item.id})"><h5 ng-bind="item.title" style="margin-left: -5px;"></h5></a>
+						<p ng-bind="item.by"></p>
+						<br>
+						<p ng-bind="item.filmDetails"></p>
+						<div class="mainof-2-content-plan">
+							<span>
+								<i class="icon">&#xe603;</i>
+								<span ng-bind="item.class"></span>
+							</span>
+							<div class="plan">
+								<div class="bar cbc-ff4200" ng-style="{width: item.plan}"></div>
+							</div>
+							<ul class="plan-message clear">
+								<li>
+									<h6 ng-bind="item.plan"></h6>
+									<p>进度</p>
+								</li>
+								<li>
+									<h6 ng-bind="item.money"></h6>
+									<p>支持金额</p>
+								</li>
+								<li>
+									<h6 ng-bind="item.days"></h6>
+									<p>剩余天数</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="homepage-mainof-3 main">
+	<div class="container">
+		<div class="main-title clear">
+			<h4 class="fl">合作单位</h4>
+		</div>
+		<ul class="cooprative clear">
+			<li ng-repeat="item in cooperativeSrc" class="fl">
+				<img ng-src="{{item}}" alt="">
+			</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,33 @@
+<div class="person">
+	<div class="person-title">
+		<div class="container clear">
+			<div class="person-title-left">
+				<img ng-src="img/头像/person-Dylan.png" alt="">
+				<p>
+					<span><i class="icon">&#xe605;</i></span>
+					<span><i class="icon">&#xe606;</i></span>
+					<span><i class="icon">&#xe607;</i></span>
+				</p>
+			</div>
+			<div class="person-title-right">
+				<div class="person-title-top">
+					<h4>用户HZ17363525</h4><span>下午好！</span>
+				</div>
+				<p>账户安全等级：<span></span></p>
+				<p>上次登录时间：<span></span></p>
+			</div>
+		</div>
+	</div>
+	<div class="person-content">
+		<div class="container clear">
+			<ul class="person-content-left fl">
+				<li ui-sref='userperson.userHome' ui-sref-active="person-show"><span>个人主页</span></li>
+				<li ui-sref='userperson.userMessage' ui-sref-active="person-show"><span>个人信息</span></li>
+				<li ui-sref='userperson.userSetting' ui-sref-active="person-show"><span>安全设置</span></li>
+				<li ui-sref='userperson.userCircle' ui-sref-active="person-show"><span>关注的圈子</span></li>
+				<li ui-sref='userperson.userRecord' ui-sref-active="person-show"><span>购买记录</span></li>
+			</ul>
+			<div class="person-content-right fr" ui-view autoscroll="false"></div>
+		</div>
+	</div>
+</div>

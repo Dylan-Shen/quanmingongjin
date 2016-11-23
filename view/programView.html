@@ -1,0 +1,58 @@
+<div class="mainof-1 main">
+	<div class="container">
+		<p>
+			<span ng-repeat="item in filmClassName" ng-click="filmShow1($index)" ng-class="{active:$index==filmShowIndex1}">{{item}}</span>
+		</p>
+		<p style="margin: 25px 0px">
+			<span ng-repeat="x in start"  ng-click="filmShow2($index)" ng-class="{active:$index==filmShowIndex2}">{{x}}</span>
+		</p>
+		<p>
+			<span ng-repeat="x in start1" ng-click="filmShow3($index)" ng-class="{active:$index==filmShowIndex3}">{{x}}</span>
+		</p>
+	</div>
+</div>
+<div class="homepage-mainof-2 main">
+	<div class="container">
+		<h5 ng-show="mainShowState">暂无此内容</h5>
+		<ul class="homepage-mainof-2-list clear">
+		<!-- | filter:x.state = show" -->
+			<li ng-repeat="item in message | filter:filmFn" class="fl">
+			<!-- 跳转details -->
+				<a ui-sref="detail({id:$index})">
+					<div class="mainof-2-content clear">
+						<img ng-src="{{item.imgSrc1}}">
+						<div class="mainof-2-content-text">
+							<h5 ng-bind="item.title" style="margin-left: -5px;"></h5>
+							<p ng-bind="item.by"></p>
+							<br>
+							<p ng-bind="item.filmDetails"></p>
+							<div class="mainof-2-content-plan">
+								<span>
+									<i class="icon">&#xe603;</i>
+									<span ng-bind="item.class"></span>
+								</span>
+								<div class="plan">
+									<div class="bar cbc-ff4200" ng-style="{width: item.plan}"></div>
+								</div>
+								<ul class="plan-message clear">
+									<li>
+										<h6 ng-bind="item.plan"></h6>
+										<p>进度</p>
+									</li>
+									<li>
+										<h6 ng-bind="item.money"></h6>
+										<p>支持金额</p>
+									</li>
+									<li>
+										<h6 ng-bind="item.days"></h6>
+										<p>剩余天数</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,58 @@
+<div class="userHome clear">
+	<div class="hot fl clear">
+		<div class="hot-title clear">
+			<h5 class="fl"><span></span>我关注的项目</h5>
+			<a href="" ng-click="showMore1()" class="fr">{{showText[showA1?0:1]}}</a>
+		</div>
+		<div class="hot-4 hot-content clear fl" ng-repeat="x in attentionMessage | limitTo:showNum1[showA1?0:1]">
+			<a ui-sref="detail({id:x.id})"><img ng-src="{{x.imgSrc1}}" class="fl"></a>
+			<div class="hot-content-text fr">
+				<a ui-sref="detail({id:x.id})"><h6 ng-bind="x.title"></h6></a>
+				<p ng-bind="x.by"></p>
+				<div class="hot-content-plan">
+					<div class="plan">
+						<div class="bar cbc-ff4200" ng-style="{width: x.plan}"></div>
+					</div>
+					<ul class="plan-message clear">
+						<span>已投资</span>
+						<h6 ng-bind="x.money"></h6>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+<div class="userHome clear">
+	<div class="hot fl clear">
+		<div class="hot-title clear">
+			<h5 class="fl"><span></span>当前最热</h5>
+			<a href="" ng-click="showMore2()" class="fr">{{showText[showA2?0:1]}}</a>
+		</div>
+		<div class="hot-3 hot-content clear fl" ng-repeat="x in hotMessage | limitTo:showNum2[showA2?0:1]">
+			<a ui-sref="detail({id:x.id})"><img ng-src="{{x.imgSrc1}}"></a>
+			<div class="hot-content-text">
+				<a ui-sref="detail({id:x.id})"><h6 ng-bind="x.title"></h6></a>
+				<p ng-bind="x.filmDetails"></p>
+				<div class="hot-content-plan">
+					<div class="plan">
+						<div class="bar cbc-ff4200" ng-style="{width: x.plan}"></div>
+					</div>
+					<ul class="plan-message clear">
+						<li>
+							<h6 ng-bind="x.plan"></h6>
+							<p>进度</p>
+						</li>
+						<li>
+							<h6 ng-bind="x.money"></h6>
+							<p>支持金额</p>
+						</li>
+						<li>
+							<h6 ng-bind="x.days"></h6>
+							<p>剩余天数</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>

@@ -1,0 +1,36 @@
+<div class="userMessage">
+	<form>
+		<div class="userMessage-of-1 userMessage-box">
+			<span>修改头像</span>
+			<div class="userMessage-right">
+				<img ng-src="{{userImg[1]}}">
+			</div>
+		</div>
+		<div class="userMessage-of-2 userMessage-box">
+			<span>用户昵称</span>
+			<div class="userMessage-right">
+				<input type="text" placeholder="{{userMessage.userName}}">
+			</div>
+		</div>
+		<div class="userMessage-of-3 userMessage-box">
+			<span>性别</span>
+			<div class="userMessage-right">
+				<span class="radio-box" ng-click="radioBoxFn1(1)">
+					<span class="radio"  ng-class="{radioBoxBj:radioBoxFn1Show}"></span>男
+				</span>				
+				<span class="radio-box" ng-click="radioBoxFn1(2)">
+					<span class="radio"  ng-class="{radioBoxBj:!radioBoxFn1Show}"></span>女
+				</span>
+			</div>
+		</div>
+		<div class="userMessage-of-4 userMessage-box">
+			<span>关注圈子</span>
+			<div class="userMessage-right">
+				<span ng-repeat="x in filmClassName" class="radio-box" ng-click="radioBoxFn($index)">
+					<span class="radio" ng-class="{radioBoxBj:myShow[$index]}"></span>{{x}}
+				</span>
+			</div>
+		</div>
+		<button type="button" class="btn">保存</button>
+	</form>
+</div>

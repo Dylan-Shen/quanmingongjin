@@ -1,0 +1,77 @@
+.userMessage{
+	height: 392px;
+	background: #fff;
+	>form{
+		.userMessage-box{
+			width: 100%;
+			position: relative;
+			margin-bottom: 30px;
+			>span{
+				display: inline-block;
+				width: 60px;
+				text-align: right;
+				margin-right: 20px;
+				position: absolute;
+				top: 50%;
+				transform:translateY(-50%);
+				font-size: 14px;
+				color: #000;
+			}
+			.userMessage-right{
+				display: inline-block;
+				padding-left: 80px;
+				width: 650px;
+				>img{
+					width: 100px;
+				}
+				>input[type=text]{
+					height: 20px;
+					width: 150px;
+					padding:0px 10px;
+				}
+			}
+		}
+		.btn{
+			padding: 10px 30px;
+			margin: 10px 0px;
+		}
+	}
+}
+.radio-box{
+	display: inline-block;
+	position: relative;
+	height: 25px;
+	line-height: 25px;
+	padding-left: 20px;
+	cursor: pointer;
+	.radio.radioBoxBj{
+		background: url('../img/show.png') center center no-repeat;
+	}
+	.radio{
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		box-sizing: border-box;
+		position: absolute;
+		border: 1px solid #ff4200;
+		top: 5px;
+		left: 0;
+		border-radius: 50%;
+	}
+}
+.userMessage-of-3{
+	.radio-box{
+		margin-right: 10px;
+		.radio{
+			border: 1px solid #ccc;
+		}
+	}
+}
+.userMessage-of-4{
+	.radio-box{
+		margin-right: 20px;
+		.radio{
+			border-radius: 0;
+		}
+	}
+}

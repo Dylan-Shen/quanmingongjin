@@ -1,0 +1,36 @@
+<div class="userRecord fr">
+	<p>
+		<span ng-repeat="x in screen" ng-click="checkContent($index)" ng-class="{'person-content-deal':$index==num}">{{x}}</span>
+	</p>
+	<table cellSpacing=0>
+		<tr class="first-tr">
+			<th style="padding-left: 45px;text-align: left">项目信息</th>
+			<th>实付款（元）</th>
+			<th>交易状态</th>
+			<th>操作</th>
+		</tr>
+		<tr ng-repeat="x in deal | filter:{state:show}">
+			<td width="500" height="150" class="clear">
+				<img ng-src="{{x.imgSrc}}" class="fl">
+				<div class="person-message fl">
+					<h5 ng-bind="x.title"></h5>
+					<p ng-bind="x.by"></p>
+					<h6 ng-bind="x.number"></h6>
+				</div>
+			</td>
+			<td width="100">
+				<h5 ng-bind="x.money" class="cfc-ff4200"></h5>
+			</td>
+			<td width="100">
+				<h5 class="cfc-ff4200">{{x.state==true?'支付成功':'待支付'}}</h5>
+			</td>
+			<td width="150" class="last-tr">
+				<button type="button" ui-sref="support.class1({id:x.id,reprice:x.money,num:1})" ng-show="x.state!=true" class="person-btn">
+					确认支付
+				</button>
+				<a ui-sref="detail({id:x.id})" class="cfc-67bafc">交易详情</a>
+				<a href="#" class="cfc-67bafc">删除</a>
+			</td>
+		</tr>
+	</table>
+</div>

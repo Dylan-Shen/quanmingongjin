@@ -1,0 +1,143 @@
+header{
+	z-index: 100;
+	position: fixed;
+	top: 0px;
+	width: 94%;
+	padding: 0 3%;border-bottom: 1px solid #d9d9de;
+	li{
+		float: left;
+		height: 70px;
+		line-height: 70px;
+		padding: 0px 5px;
+		margin-right: 1px;
+		a{
+			line-height: 70px;
+			font-size: 14px;
+			display: block;
+			h3{
+				line-height: 70px;
+				display: block;
+			}
+		}
+	}
+	.header-left{
+		li{
+			a{
+				padding: 0px 20px;
+				&.headerActive{
+					background-color: #f5f6f7;
+					border-radius: 4px;
+				}
+			}
+			a:hover{
+				background-color: #f5f6f7;
+				border-radius: 4px;
+			}
+		}
+		li.division-v{
+			margin:0 30px;width: 1px;background: #d9d9de;padding: 0px
+		}
+		li.header-search{
+			position: relative;
+			input{
+				border: 0px;
+				width: 300px;
+				font-size: 14px;
+				line-height: 30px;
+				padding: 5px 10px 5px 40px;
+			}
+			ul{
+				width: 300px;
+				position: absolute;
+				top: 100%;
+				left:35px;
+				li{
+					float: none;
+					height: 40px;
+					line-height: 40px;
+					background: #ff4200;
+					color: #fff;
+					padding: 0px 10px;
+					&:hover{
+						background: #fff;
+						color: #000;
+					}
+				}
+			}
+		}
+	}	
+	.header-right{
+		li{
+			a{
+				padding: 0px 10px;
+			}
+		}
+	}
+}
+footer{
+	position: relative;
+	background: #150b09;
+	ul{
+		li{
+			float: left;
+			height: 100px;line-height: 100px;padding: 0px 5px;margin-right: 1px
+		}
+	}
+}
+.banner{position: relative;width: 100%;height: 766.67px;}
+.banner ul li{position: absolute;width: 100%;}
+.banner ul li h2{position:absolute; top: 35%;left: 50%;transform: translateX(-50%);color: #fff}
+.banner ul li p{position: absolute;top:45%;left: 50%;transform: translateX(-50%);
+	color: #fff;font-size: 14px;}
+.banner ul li img{width: 100%;height: 682px;}
+.banner-left{position:absolute;top: 50%;left:10%;transform: translateY(-50%);height: 120px;}
+.banner-right{position: absolute;top: 50%;right:10%;transform: translateY(-50%);
+	height: 120px;}
+.banner i{line-height: 120px;font-size: 120px;color: #fff;cursor: pointer}
+.banner-btn{position: absolute;top: 55%;left: 50%;transform: translateX(-50%);border-radius: 4px}
+.banner-btn a{display: block;padding: 20px 30px;text-align: center;}
+
+
+
+/*hot*/
+.hot{width: 80%;margin-right: 5%;}
+.filmclass{width: 15%;}
+.hot-title{line-height: 60px;}
+.hot-content{margin-top: 15px;}
+.hot-content>a{width: 35%;}
+.hot-content>a>img{width: 100%;height: 240px;}
+.hot-content-text{margin-left: 5%;width: 60%;}
+.hot-content-text p{word-wrap: break-word;}
+.hot-content-plan{margin-top: 40px;}
+.hot-content-plan>span{margin-right: 20px;font-size: 12px;}
+.hot-content-plan i{font-size: 14px;}
+.plan{width: 100%;height: 10px;border-radius: 5px;background: #d9d9de;margin: 10px 0px;position: relative;}
+.plan>.bar{position: absolute;top: 0;left: 0px;max-width: 100%;height: 10px;border-radius: 5px;}
+.plan-message>li{float: left;margin-right: 20px;}
+
+/*filmclass*/
+.filmclass li span{padding-left: 20px;line-height: 35px;width: 100%;display: inline-block;}
+.currentBorder{border-left: 1px solid #dadada;}
+.filmclass .changeBorder{border-left: 2px solid #ff4200;box-sizing: border-box;padding-left: 18px;}
+
+/*homepage-mainof-2*/
+.homepage-mainof-2{background: #fff;}
+.main-title{margin-bottom: 50px;}
+.main-title a{line-height: 27px;padding: 0 7px;display: block;border: 1px solid #a3a6a7;
+	border-radius: 4px;}
+.homepage-mainof-2-list>li{width: 30%;margin-right: 5%;}
+.homepage-mainof-2-list>li:last-child{margin-right: 0;}
+.mainof-2-content{width: 100%;border: 1px solid #c3c5c8;border-radius: 4px;}
+.mainof-2-content img{height: 240px;}
+.mainof-2-content-text{padding: 5%;}
+.mainof-2-content-text p{font-size: 11px;line-height: 18px;}
+.mainof-2-content-text span{font-size: 12px;line-height: 20px;}
+.mainof-2-content-plan{margin-top: 20px;}
+
+/*.homepage-mainof-3*/
+.cooprative{padding-bottom: 20px;}
+.cooprative>li{width: 17.6%;margin-right: 3%;border: 1px solid #e1e1e5;position: relative;
+	height: 80px;overflow: hidden;background: #fff;box-sizing: border-box;}
+.cooprative>li:last-child{margin-right: 0;}
+.cooprative>li>img{width: 100%;position: absolute;top: 50%;left: 50%;
+	transform: translate(-50%,-50%);}

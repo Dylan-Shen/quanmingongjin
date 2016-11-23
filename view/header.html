@@ -1,0 +1,36 @@
+<header class="cbc-fff clear">
+	<ul class="header-left fl">
+		<li class="logo">
+			<a href="#"><h3>全民<span class="cfc-ff4200">创造</span></h3></a>
+		</li>
+		<li class="header-nav">
+			<ul class="clear">
+				<li><a ui-sref="homepage" ui-sref-active="headerActive">首页</a></li>
+				<li><a ui-sref="program" ui-sref-active="headerActive">节目专栏</a></li>
+				<li><a ui-sref="circle" ui-sref-active="headerActive">圈子</a></li>
+			</ul>
+		</li>
+		<li class="division-v"></li>
+		<li class="header-search">
+			<i class="icon va-center">&#xe600;</i>
+			<input type="text" placeholder="输入您想输入的内容" ng-model="searchInput">
+			<ul ng-show="searchInput">
+				<li ng-repeat="x in message | filter:{title:searchInput}">{{x.title}}</li>
+			</ul>
+		</li>
+	</ul>
+	<ul class="header-right fr">
+		<li ng-show="!loginShow">
+			<a ui-sref="register"><h5 class="cfc-ff4200">登录</h5></a>
+		</li>
+		<li ng-show="!loginShow">
+			<a ui-sref="login"><h5 class="cfc-ff4200">注册</h5></a>
+		</li>
+		<li ng-show="loginShow">
+			<a ui-sref="userperson.userHome({key:currentUser.key,value:currentUser.value})"><h5 class="cfc-ff4200">我的主页</h5></a>
+		</li>
+		<li ng-show="loginShow">
+			<a ui-sref="register" ng-click="cancelFn()"><h5 class="cfc-ff4200">注销</h5></a>
+		</li>
+	</ul>
+</header>
